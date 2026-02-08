@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - main
+  push:
+    branches:
+      - test
 
 jobs:
   ci-job:
@@ -13,12 +16,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Echo commit info
-        run: |
-          echo "Commit SHA: ${{ github.sha }}"
-          echo "Actor: ${{ github.actor }}"
+      - name: Debug – show files
+        run: ls -R
 
-     - name: Run shell script
-       run: |
-           chmod +x week1_case_study/backup_logs.sh
+      - name: Run backup logs script
+        run: |
+          chmod +x week1_case_study/backup_logs.sh
           ./week1_case_study/backup_logs.sh
+
