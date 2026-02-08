@@ -11,5 +11,4 @@ Run CI checks automatically on Pull Requests.
 ## Tools
 Git, GitHub Actions, Linux, Shell Scripting
 
-this is the prctice 
-CI test change to trigger GitHub Actions
+hello this is the practice file

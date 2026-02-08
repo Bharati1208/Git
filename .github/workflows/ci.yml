@@ -1,0 +1,26 @@
+name: PR CI Check
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - test
+
+jobs:
+  ci-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Debug – show files
+        run: ls -R
+
+      - name: Run backup logs script
+        run: |
+          chmod +x week1_case_study/backup_logs.sh
+          ./week1_case_study/backup_logs.sh
+
