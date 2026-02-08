@@ -12,3 +12,4 @@ Run CI checks automatically on Pull Requests.
 Git, GitHub Actions, Linux, Shell Scripting
 
 this is the prctice 
+CI test change to trigger GitHub Actions
