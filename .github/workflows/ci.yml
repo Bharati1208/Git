@@ -18,7 +18,7 @@ jobs:
           echo "Commit SHA: ${{ github.sha }}"
           echo "Actor: ${{ github.actor }}"
 
-      - name: Run shell script
-        run: |
-          chmod +x backup_logs.sh
-          ./backup_logs.sh
+     - name: Run shell script
+       run: |
+           chmod +x week1_case_study/backup_logs.sh
+          ./week1_case_study/backup_logs.sh
